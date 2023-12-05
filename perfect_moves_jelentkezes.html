@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<HTML lang="hu">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <meta name="description" content="Perfect Moves Tánciskola weboldala">
+    <meta name="copyright" content="Csak tanulmányi célokra">
+    <meta name="author" content="Zsámbokréty Zsófia">
+    <link rel="icon" type= "image/x-icon" href="pictures/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+    <script src="script/jquery-3.7.1.min.js"></script>
+    <script src="script/jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $("#myform").validate({
+        
+        rules: {
+        vez: "required",
+        kereszt: "required",
+        telo: {
+        required: true,
+        minlength: 12
+        },
+        kor: "required",
+        email: {
+        required: true,
+        email: true
+        },
+        elfogad: "required"
+        },
+
+
+        messages: {
+        vez: " Írja be a jelentkező keresztnevét!",
+        kereszt: " Írja be a jelentkező vezetéknevét!",
+        telo: {
+        required: " Add meg a jelszavad!",
+        minlength: " Kérem valós telefonszámot adjon meg (szóközök nélkül)!"
+        },
+        kor:{
+        required: "Adjon meg életkort!",
+        min:"3 éves kor alatt nem tartunk órát.",
+        max:"Valós kort adjon meg!",
+        },
+        mufaj: " Kérem válasszon legalább egy műfajt!",
+        email: " Kérem valós email címet adjon meg!",
+        elfogad: " Kérem fogadja el a házirendet!",
+        },
+        });
+        });
+    </script>
+    <title>Perfect Moves Tánciskola</title>
+</head>
+
+<body>
+    <header>
+        <p><img src="pictures/logo2.png" alt="logo" class="logokep"></p>
+        <h3>Jelentkezés</h3>
+    </header>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="perfect_moves_tanfolyamok.html">Tanfolyamok</a></li>
+                <li><a   href="perfect_moves_orarend.html">Órarend és áraink</a></li>
+                <li><a class="active" href="#">Jelentkezés</a></li>
+                <li><a  href="perfect_moves_kviz.html">Táncosok kvíze</a></li>
+            </ul>
+        </nav>
+       
+       
+        <article class="jelentkezes">
+            <form method="post" id="myform" novalidate action="http://szamtud.uni-corvinus.hu/receive.php">  
+                <h1>Jelentkezési űrlap</h1> 
+                <h5>Ha szeretne Ön is a tánc csodálatos élményével meggazdagodni, akkor az alábbi űrlap kítöltésével jelentkezhet kurzusainkra.</h5> 
+                
+                <label>Vezetéknév: <input type="text"  id="kereszt" name="kereszt" size="40" ></label><br><br>
+                <label>Keresztnév: <input type="text" id="vez" name="vez" size="40" ></label><br><br>
+                
+                <label>Telefonszám: <input type="text" id="telo"  name="telo" value="+36-"></label><br><br>
+                <label>Email cím: <input type="email"  id="email" name="email"  ></label><br><br>
+                <label>Melyik táncműfajt választja?
+                    <select name="mufaj[]" multiple id="mufaj" size="5">
+                        <option value="hiphop">Hip-hop</option>
+                        <option value="jazz">Jazz</option>
+                        <option value="balett">Balett</option> 
+                        <option value="tarsas">Társastánc</option> 
+                        <option value="salsa">Salsa</option> 
+                    </select> 
+                </label><br><br>
+                <label>Életkor:<input type="number" name="kor" id="kor" min="3" max="100"></label><br><br>
+                Korosztály:<br>
+                <label><input type="radio"  name="koroszt" value="ovi">Óvodás kor<br></label>
+                <label><input type="radio"  name="koroszt" value="hat">6-10 éves <br></label>
+                <label><input type="radio" name="koroszt" value="tiz">10-14 éves<br></label>
+                <label><input type="radio" name="koroszt" value="tiznegy">14-18 éves<br></label>
+                <label><input type="radio" name="koroszt" value="felnott">Felnőtt<br></label><br>
+                Kezdő vagy haladó szinten van jelenleg a kiválasztott műfajokból?<br>
+                <label><input type="radio"  name="kivalaszt" checked value="kezdo">kezdő <br></label>
+                <label><input type="radio" name="kivalaszt" value="halado">haladó <br></label>
+                <p>
+                <label for="elfogad">Elfogadom a tánciskola házirendjét.
+                <input type="checkbox" name="elfogad" id="elfogad"></label>
+                </p>
+                <label><input type="submit" value="Elküldés"></label>
+                <label><input type="reset" value="Alaphelyzet"> </label><br>
+                
+            </form>
+        </article>
+    </div>
+    <footer>Nem egy valós tánciskola. Az oldal tanulmányi célú.</footer>
+</body>
+</HTML>

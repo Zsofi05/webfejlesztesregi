@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<HTML lang="hu">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <meta name="description" content="Perfect Moves Tánciskola weboldala">
+    <meta name="copyright" content="Csak tanulmányi célokra">
+    <meta name="author" content="Zsámbokréty Zsófia">
+    <link rel="icon" type= "image/x-icon" href="pictures/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+    <script src="script/kviz.js"></script>
+    <title>Perfect Moves Tánciskola</title>
+</head>
+
+<body>
+    <header>
+        <p><img src="pictures/logo2.png" alt="logo" class="logokep"></p>
+        <h3>Táncos kvíz</h3>
+    </header>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="perfect_moves_tanfolyamok.html">Tanfolyamok</a></li>
+                <li><a   href="perfect_moves_orarend.html">Órarend és áraink</a></li>
+                <li><a href="perfect_moves_jelentkezes.html">Jelentkezés</a></li>
+                <li><a   class="active" href="#">Táncosok kvíze</a></li>
+            </ul>
+        </nav>
+        <article class="kviz">
+          
+                <h1>Kvíz</h1> 
+                <h3>Üdvözöllek a Táncos Tudás Kvízén!</h3>
+                <h5>
+
+                    Ma egy kis szórakozásra hívlak, hogy együtt ünnepeljük a táncot és a tudást. Szállj be a virtuális táncparkettre, és készülj fel a vidám kérdéssorozatra, ahol a ritmus és a grácia a főszereplők!</h5> 
+                <form method="post" id="myform" novalidate action="http://szamtud.uni-corvinus.hu/receive.php">  
+                    <p>   1. Melyik táncstílus ismert a számtalan gyors és összetett lábmozdulatáról, és gyakran páros tánc?<br>
+                        <label><input type="radio" name="question1" id="1" value="1"> Salsa</label>
+                        <label><input type="radio" name="question1" id="2" value="2"> Breakdance</label>
+                        <label><input type="radio" name="question1" id="3" value="3"> Quickstep</label><br>
+                    </p>   
+                   <p> 2. Melyik klasszikus balett történetben szerepel egy fadarab, amely egy fiú és egy lány közötti romantikus kapcsolatot ábrázol?<br>
+                        <label><input type="radio" name="question2" id="4" value="4"> Giselle</label>
+                        <label><input type="radio" name="question2" id="5" value="5"> Coppélia</label>
+                        <label><input type="radio" name="question2" id="6" value="6"> Szépség és a Szörnyeteg</label>
+                    </p> 
+                    <p>
+                    <label>3. Melyik tánc jellemzi a könnyed, szabad stílust, és gyakran az improvizációra és a kreativitásra épül?<br>
+                        <input type="text" name="kerdes4" size="10" id="kortars" placeholder="Ide írd a választ"></label>   
+                    </p>
+                    <p>
+                    4. Az alábbiak közül melyik nem standard tánc?<br>
+                    <label><input type="checkbox" id="keringo">  keringő<br></label>
+                    <label> <input type="checkbox" id="hiphop"> hip-hop<br></label>
+                    <label>  <input type="checkbox" id="tango"> tangó<br></label>   
+                    <label>  <input type="checkbox" id="kortarsok"> kortárs<br></label> 
+                    </p>         
+                    <button type="button" id="mybutten" onClick="feldolgoz()">Ellenőrzés</button>
+                    <input type="reset" value="Újrakezdés" onClick="eltuntet()">
+                    </form>
+                    <p><span id="osszpont"></span></p>
+                    <p><span id="uzenet"></span></p>
+                </article>
+    </div>
+    <footer>Nem egy valós tánciskola. Az oldal tanulmányi célú.</footer>
+</body>
+
+</HTML>
