@@ -25,7 +25,7 @@ function feldolgoz() {
         document.getElementById("uzenet").innerHTML = "Gratulálunk! Sikeresen töltötted ki a kvízt!"
     }
     if (pontszam < 4) {
-        document.getElementById("uzenet").innerHTML = "Sajnos ez most nem sikerült! De semmi probléme, kattints az újrakezdés gombra, és próbáld újra!"}}
+        document.getElementById("uzenet").innerHTML = "Sajnos ez most nem sikerült :(! De semmi probléme, kattints az újrakezdés gombra, és próbáld újra!"}}
 x=1
 function eltuntet(){
     x=x+1
