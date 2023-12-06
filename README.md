@@ -19,3 +19,6 @@ https://www.midjourney.com/home?callbackUrl=%2Fexplore
 
 A galéria képei szabadon felhasználható képek a következő oldalról:
 https://www.istockphoto.com/hu/stock-fotok?utm_medium=cpc&utm_source=GOOGLE&utm_campaign=HU_Tail_EN_DSA&utm_content=Photos_DSA&utm_term=DYNAMIC+SEARCH+ADS&gad_source=1&gclid=EAIaIQobChMIlYbglPn4ggMVMIuDBx1tiAPNEAAYAiAAEgLrkvD_BwE&gclsrc=aw.ds
+
+Github link:
+https://zsofi05.github.io/webfejlesztes/
